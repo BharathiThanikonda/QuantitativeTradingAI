@@ -251,19 +251,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 This software is for educational and research purposes only. It is not intended to provide financial advice. Trading stocks involves risk, and past performance does not guarantee future results. Always do your own research and consider consulting with a financial advisor before making investment decisions.
 
-## 🙏 Acknowledgments
-
-- Original Stock-Prediction-Models repository by [huseinzol05](https://github.com/huseinzol05/Stock-Prediction-Models)
-- TensorFlow and PyTorch communities
-- Financial data providers (Yahoo Finance, Alpha Vantage)
-- Open-source contributors
 
 ## 📞 Support
 
 - **Issues**: [GitHub Issues](https://github.com/yourusername/QuantitativeTradingAI/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/yourusername/QuantitativeTradingAI/discussions)
-- **Email**: your.email@example.com
+- **Email**: bharathithanikonda123@example.com
 
----
-
-**Made with ❤️ for the quantitative trading community**
