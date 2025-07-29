@@ -1,0 +1,180 @@
+# QuantitativeTradingAI Configuration
+# ===================================
+
+# Application Settings
+app:
+  name: "QuantitativeTradingAI"
+  version: "1.0.0"
+  debug: false
+  host: "0.0.0.0"
+  port: 5000
+
+# Trading Parameters
+trading:
+  initial_capital: 10000
+  transaction_cost: 0.001
+  risk_free_rate: 0.02
+  max_position_size: 0.1  # 10% of portfolio
+  stop_loss: 0.05  # 5% stop loss
+  take_profit: 0.1  # 10% take profit
+
+# Model Parameters
+models:
+  window_size: 20
+  layer_size: 500
+  learning_rate: 0.001
+  batch_size: 32
+  epochs: 100
+  validation_split: 0.2
+
+# Deep Learning Models
+deep_learning:
+  lstm:
+    units: 50
+    dropout: 0.2
+    recurrent_dropout: 0.2
+  gru:
+    units: 50
+    dropout: 0.2
+    recurrent_dropout: 0.2
+  transformer:
+    num_heads: 8
+    d_model: 512
+    num_layers: 6
+    dropout: 0.1
+
+# Trading Agents
+agents:
+  q_learning:
+    learning_rate: 0.1
+    discount_factor: 0.95
+    epsilon: 0.1
+    epsilon_decay: 0.995
+  actor_critic:
+    actor_lr: 0.001
+    critic_lr: 0.001
+    gamma: 0.95
+  evolution_strategy:
+    population_size: 15
+    sigma: 0.1
+    learning_rate: 0.03
+
+# Data Sources
+data_sources:
+  yahoo_finance:
+    enabled: true
+    cache_duration: 3600  # 1 hour
+  alpha_vantage:
+    enabled: false
+    api_key: ""
+    cache_duration: 300  # 5 minutes
+
+# Available Symbols
+symbols:
+  stocks:
+    - "GOOG"
+    - "TSLA"
+    - "FB"
+    - "AMD"
+    - "AAPL"
+    - "MSFT"
+    - "AMZN"
+    - "NVDA"
+  crypto:
+    - "BTC-USD"
+    - "ETH-USD"
+    - "ADA-USD"
+  forex:
+    - "EUR-USD"
+    - "GBP-USD"
+    - "JPY-USD"
+
+# Technical Indicators
+indicators:
+  rsi:
+    period: 14
+    overbought: 70
+    oversold: 30
+  macd:
+    fast_period: 12
+    slow_period: 26
+    signal_period: 9
+  bollinger_bands:
+    period: 20
+    std_dev: 2
+  moving_averages:
+    short_period: 10
+    long_period: 50
+
+# Risk Management
+risk_management:
+  max_drawdown: 0.15  # 15% maximum drawdown
+  var_confidence: 0.95  # 95% VaR confidence level
+  position_sizing: "kelly"  # kelly, fixed, volatility
+  correlation_threshold: 0.7
+
+# Logging
+logging:
+  level: "INFO"
+  file: "logs/quantitative_trading_ai.log"
+  max_size: 10485760  # 10MB
+  backup_count: 5
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# Database (if using)
+database:
+  type: "sqlite"  # sqlite, postgresql, mysql
+  path: "data/trading.db"
+  host: "localhost"
+  port: 5432
+  name: "quantitative_trading"
+  user: ""
+  password: ""
+
+# API Keys (store securely in environment variables)
+api_keys:
+  alpha_vantage: "${ALPHA_VANTAGE_API_KEY}"
+  yahoo_finance: "${YAHOO_FINANCE_API_KEY}"
+  polygon: "${POLYGON_API_KEY}"
+  iex: "${IEX_API_KEY}"
+
+# Performance Monitoring
+monitoring:
+  enabled: true
+  metrics:
+    - "accuracy"
+    - "sharpe_ratio"
+    - "max_drawdown"
+    - "total_return"
+    - "volatility"
+  dashboard:
+    enabled: true
+    port: 8080
+
+# Backtesting
+backtesting:
+  start_date: "2020-01-01"
+  end_date: "2023-12-31"
+  initial_capital: 10000
+  commission: 0.001
+  slippage: 0.0001
+  benchmark: "SPY"
+
+# Simulation
+simulation:
+  monte_carlo:
+    num_simulations: 1000
+    time_steps: 252
+    volatility: 0.2
+    drift: 0.08
+  portfolio_optimization:
+    method: "efficient_frontier"  # efficient_frontier, black_litterman, risk_parity
+    rebalance_frequency: "monthly"
+
+# Output Settings
+output:
+  save_models: true
+  save_predictions: true
+  save_plots: true
+  output_dir: "output"
+  format: "png"  # png, jpg, svg, pdf 
