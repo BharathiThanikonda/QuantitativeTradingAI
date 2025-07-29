@@ -139,10 +139,13 @@ dmypy.json
 # Data files (large CSV files)
 *.csv
 !sample_data/*.csv
+!Prediction-Models/dataset/*.csv
 
 # Output files
 output/
 output-agent/
+!Prediction-Models/output/
+!Prediction-Models/output-agent/
 *.png
 *.jpg
 *.jpeg
